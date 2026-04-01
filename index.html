@@ -83,7 +83,7 @@
           if (!email || !email.includes('@')) { msg.textContent = 'Please enter a valid email address.'; return; }
           btn.disabled = true; btn.textContent = '...'; msg.textContent = '';
           try {
-            const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email }) });
+            const res = await fetch('https://formspree.io/f/xeepzqej', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ email }) });
             if (res.ok) { input.value = ''; msg.textContent = "Thank you. We'll be in touch."; btn.textContent = '✓'; }
             else { msg.textContent = 'Something went wrong. Please try again.'; btn.disabled = false; btn.textContent = 'Notify me'; }
           } catch (e) { msg.textContent = 'Could not connect. Please try again.'; btn.disabled = false; btn.textContent = 'Notify me'; }
